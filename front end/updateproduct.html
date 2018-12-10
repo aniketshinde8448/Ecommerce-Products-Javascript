@@ -1,0 +1,158 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./updateproduct.js"></script>
+    <script src="bundle.js"></script>
+    
+</head>
+
+<body>
+
+    <div align="center" id="oldprod"></div>
+
+    <div align="left"><img src="3447.png" alt="Iauro Systems" width="140" height="90"></div>
+    
+    <br>
+
+    <form name="product display" align="center">
+                <div id="products" align="center"></div>
+        </form>
+
+    <br>
+
+    <h1 align="center">New Product Details</h1>
+    
+    <form novalidate autocomplete="off" name="addproduct">
+
+    <div class="form-group" align="center">
+        <table>
+                <tr>
+                        <td><label class="control-label">Product Name:<span style="color:red;">*</span></label></td>
+                        <td><input class="form-control" type="text" name="product name" id="prodname"  [(ngModel)]="prodname" maxlength="30"/></td>
+                </tr>
+        </table>       
+    </div>
+
+    <div class="form-group" align="center">
+        <table>
+                <tr>
+                        <td><label class="control-label">Product Description:<span style="color:red;">*</span></label></td>
+                        <td><input class="form-control" type="text" name="product desc" id="proddesc"  [(ngModel)]="proddesc" maxlength="30"/></td>
+                </tr>
+        </table>       
+    </div>
+
+    <div class="form-group" align="center">
+        <table>
+                <tr>
+                        <td><label class="control-label">Product Category:<span style="color:red;">*</span></label></td>
+                        <td><input class="form-control" type="text" name="product cat" id="prodcat"  [(ngModel)]="prodcat" maxlength="30"/></td>
+                </tr>
+        </table>       
+    </div>
+
+    <div class="form-group" align="center">
+        <table>
+                <tr>
+                        <td><label class="control-label">Product Price:<span style="color:red;">*</span></label></td>
+                        <td><input class="form-control" type="text" name="product price" id="prodprice"  [(ngModel)]="prodprice" maxlength="30"/></td>
+                </tr>
+        </table>       
+    </div>
+
+    <div align="center">
+        <a><button type="button" id="submit" onclick="updtproduct()">UPDATE</button></a>
+    </div>
+
+    
+
+</form>
+
+
+
+
+    <script type="text/javascript">
+    
+    var a= decodeURIComponent(window.location.search);
+var arv=a.substring(1);
+//document.getElementById("oldprod").innerHTML.value=arv;
+//console.log(arv);
+
+/*window.onload= function(){
+    history.pushState(a,null,"http://127.0.0.1:8080/updateproduct.html")
+}*/
+
+function dynamicElem(arr){
+    //alert("hiii");
+    var ob= JSON.parse(arr);
+    //console.log(ob);
+    var obj= document.createElement('table');
+    var row= obj.insertRow(0);
+    var c = row.insertCell(0);
+    c.innerHTML ="Product Name ".bold();
+    c = row.insertCell(1);
+    c.innerHTML = " Product Description ".bold();
+    c = row.insertCell(2);
+    c.innerHTML = " Product Category ".bold();
+    c = row.insertCell(3);
+    c.innerHTML = " Product Price ".bold();
+
+    var element = document.getElementById("products");
+    element.appendChild(obj);
+
+    
+    
+    var row= obj.insertRow(1);
+    var c = row.insertCell(0);
+    c.innerHTML = ob.product_name;
+    c = row.insertCell(1);
+    c.innerHTML = " "+ob.product_desc;
+    c = row.insertCell(2);
+    c.innerHTML = " "+ob.product_category;
+    c = row.insertCell(3);
+    c.innerHTML = " "+ob.product_price;      
+    
+    
+   // var pn = document.createTextNode(arr[i].product_name);
+    //var pd= document.createTextNode(arr[i].product_desc);
+    //var pc= document.createTextNode(arr[i].product_category);
+    //var pp= document.createTextNode(arr[i].product_price);
+    //obj.appendChild(pn);
+    //obj.appendChild(pd);
+    //obj.appendChild(pc);
+    //obj.appendChild(pp); 
+
+    //var element = document.getElementById("products").innerHTML;
+    element.appendChild(obj);
+
+
+    //console.log(typeof  ob.product_name);
+    document.getElementById("prodname").defaultValue=ob.product_name;
+    document.getElementById("proddesc").defaultValue=ob.product_desc;
+    document.getElementById("prodcat").defaultValue=ob.product_category;
+    document.getElementById("prodprice").defaultValue=ob.product_price;
+    
+}
+
+dynamicElem(arv);     
+
+//var pdd= JSON.parse(arv);
+//$("#prodname").val(ob.product_name);
+//$("#proddesc").val(ob.product_desc);
+//$("#prodcat").val(ob.product_category);
+//$("#prodprice").val(ob.product_price);
+//document.getElementById("prodname").innerHTML=pdd.product_name;
+//document.getElementById("proddesc").innerHTML=pdd.product_desc;
+//document.getElementById("prodcat").innerHTML=pdd.product_category;
+//document.getElementById("prodprice").innerHTML=pdd.product_price;
+
+    </script>
+
+
+    
+
+
+
+
+</body>
+</html>

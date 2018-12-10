@@ -1,0 +1,130 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./signupval.js"></script>
+</head>
+
+<body>
+    <div align="center"><img src="3447.png" alt="Iauro Systems" width="140" height="90"></div>
+    
+    <br>
+    <h1 align="center">Sign Up</h1>
+    
+    <form novalidate autocomplete="off" name="signupform">
+
+    <div class="form-group" align="center">
+        <table>
+                <tr>
+                        <td><label class="control-label">Username:<span style="color:red;">*</span></label></td>
+                        <td><input class="form-control" type="text" name="username" id="username" placeholder="Enter Username " [(ngModel)]="username" maxlength="30"/></td>
+                </tr>
+        </table>       
+    </div>
+            
+    <div class="form-group" align="center">
+        <table>
+                <tr>
+                    <td><label class="control-label">Password:<span style="color:red;">*</span></label></td>
+                    <td><input class="form-control" type="password" name="password" id="password" placeholder="Enter Password " [(ngModel)]="password" maxlength="10"/></td>
+                </tr>
+        </table>       
+    </div>
+    
+    <div class="form-group" align="center">
+        <table>
+            <tr>
+                    <td><label class="control-label">User Emailid:<span style="color:red;">*</span></label></td>
+                    <td><input class="form-control" type="text" name="useremail" id="useremail" placeholder="Enter User Emailid " [(ngModel)]="useremail" maxlength="50"/></td>
+            </tr>
+        </table>       
+    </div>
+    
+    <!--<div class="form-group" align="center">
+            <table>
+                <tr>
+                        <td><label class="control-label">User Type:<span style="color:red;">*</span></label></td>
+                        <td><select id="usertype">
+                                <option value="vendor">Vendor</option>
+                                <option value="admin">Admin</option>
+                              </select></td>
+                </tr>
+            </table>       
+    </div>-->
+    
+    
+    <div align="center">
+        <a><button type="button" id="submit" onclick="validatesignup()">Submit</button></a>
+    </div>
+    
+    <div align="center">
+        <a href="http://127.0.0.1:8080/login.html">Back to login page !!</a>
+        </div>
+    
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p align="right" ><font size="2" color="sky blue">&copy; 2018 ANI@IAURO SYSTEMS</font></p>
+    
+    </form>
+    <!--<div align="center">
+    <table>
+      <tr>
+          <td>First Name:</td>
+          <td><input type="text" placeholder="First Name"></td>
+      </tr>
+      <!--<tr>
+          <td><input type="text" class="form-control" id="name"
+            required
+            [(ngModel)]="model.name" name="name"
+            #spy></td>
+      </tr>
+      <tr>
+          <td>Last Name:</td>
+          <td><input type="text" placeholder="Last Name"></td>
+      </tr>
+      <tr>
+          <td>Username:</td>
+          <td><input type="text" placeholder="Username"></td>
+      </tr>
+      <tr>
+          <td>Password:</td>
+          <td><input type="password" placeholder="Password"></td>
+      </tr>
+      <tr>
+          <td>Confirm Password:</td>
+          <td><input type="password" placeholder="Re-enter Password" required></td>
+      </tr>
+      <tr>
+          <td>Address:</td>
+          <td><textarea rows="3" cols="30" placeholder="Address"> </textarea></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>
+        <button type="submit" name="Submit">Submit</button>
+        </td>
+      </tr>
+    </table>-->
+    
+    <!--</div>
+    
+    
+    </form>-->
+    
+    <div class="modalContainer" 
+      ng-style="{'background-image': 'url('/media/aniket/2B508CB150AFD7C5/sem2/sem4/SA/newproj/src/app ')'}">
+    </div>
+    </body>
+
+</html>

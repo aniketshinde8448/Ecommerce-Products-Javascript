@@ -1,0 +1,119 @@
+<html>
+
+    <head>
+            <script type="text/javascript" >
+
+                function checkcookie(){
+                var cok= document.cookie;
+                console.log(cok);
+                var st=cok.split("=");
+                //alert(st);
+                if(st[1]!=null){
+                    window.location.href="http://127.0.0.1:8080/testuserpage.html";
+                }
+                else{
+                    window.location.href="http://127.0.0.1:8080/testlogin.html";
+                }
+                //document.getElementById("cok").innerHTML=cok;       
+                }
+
+                function logout(){
+                    document.cookie="useremail=;Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+                    window.location.href="http://127.0.0.1:8080/testlogin.html";                    
+                }
+
+
+            </script>
+    </head>
+
+
+        <body onload="checkcookie()">
+
+                <script type="text/javascript">
+
+                    function checkcookie(){
+                    var cok= document.cookie;
+                    console.log(cok);
+        
+                    document.getElementById("cok").innerHTML=cok;       
+                    }
+                </script>
+
+        
+            <!--//window.addEventListener("beforeunload", function(event) {
+            //event.returnValue = "Write something clever here..";
+
+            /*var prevPage = "<%=prevPage%>"
+            onbeforeunload = function() {
+                if(document.referrer == prevPage) {
+                alert("Back Button Pressed");
+// Do Whatever here
+                }
+            }*/
+        
+            /*window.onbeforeunload = function(event) {
+                event.alert( "Dude, are you sure you want to refresh? Think of the kittens!");
+            }*/
+
+
+        /*var Session = Session || (function() {
+  
+              // window object
+              var win = window.top || window;
+               
+              // session store
+              var store = (win.name ? JSON.parse(win.name) : {});
+               
+              // save store on page unload
+              function Save() {
+                win.name = JSON.stringify(store);
+              };
+               
+              // page unload event
+              if (window.addEventListener) window.addEventListener("unload", Save, false);
+              else if (window.attachEvent) window.attachEvent("onunload", Save);
+              else window.onunload = Save;
+             
+              // public methods
+              return {
+               
+                // set a session variable
+                set: function(name, value) {
+                  store[name] = value;
+                },
+                 
+                // get a session value
+                get: function(name) {
+                  return (store[name] ? store[name] : undefined);
+                },
+                 
+                // clear session
+                clear: function() { store = {}; },
+                 
+                // dump session data
+                dump: function() { return JSON.stringify(store); }
+              
+              };
+              
+             })();*/
+
+
+       // alert(Session.get("usermail"));-->
+
+
+        
+        <div align="center">Hello User  </div>
+
+        <div id="cok"></div>
+        <div align="right">
+            <button type="button" onclick="logout()">logout</button>
+        </div>
+
+    </body>
+</html> 
+
+
+
+
+
+

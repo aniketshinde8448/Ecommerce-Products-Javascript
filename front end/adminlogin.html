@@ -1,0 +1,95 @@
+<html>
+<head>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script type="text/javascript" src="./adminlogin.js"></script>
+            <script type="text/javascript">
+              function preventBack() { window.history.forward(); }
+              setTimeout("preventBack()", 0);
+              window.onunload = function () { null };
+          </script>
+    </head>
+<body >
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div align="center"><img src="3447.png" alt="Iauro Systems" width="160" height="80"></div>
+        <br>
+        <h1 align="center">Admin Login Page</h1>
+        
+        <form novalidate autocomplete="off">
+        <div class="form-group" align="center">
+          <table>
+              <tr>
+                      <td><label class="control-label">Admin Email:<span style="color:red;">*</span></label></td>
+                      <td><input class="form-control" type="text" name="adminemail" id="adminemail" placeholder="Enter Admin name " [(ngModel)]="username" maxlength="30"></td>
+              </tr>
+          </table>       
+        </div>
+        
+        <div class="form-group" align="center">
+          <table>
+              <tr>
+                      <td><label class="control-label">Password:<span style="color:red;">*</span></label></td>
+                      <td><input class="form-control" type="password" name="password" id="password" placeholder="Enter Password " [(ngModel)]="password" maxlength="10"/></td>
+              </tr>
+          </table>       
+        </div>
+        
+        <div align="center">
+          <button type="button" onclick="adminpage()">Login</button>
+        </div>
+
+        <br>
+        <div align="center">
+          <button type="button" onclick="location.href ='http://127.0.0.1:8080/login.html';">Back To Login Page</button>
+        </div>
+        
+        
+        <!--<div align="center">
+                <table>
+                  <tr>
+                      <td>Username:</td>
+                      <td><input type="text" placeholder="Username"></td>
+                  </tr>
+                  <tr>
+                      <td>Password:</td>
+                      <td><input type="password" placeholder="Password"></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                    <button type="submit" name="Submit">Login</button>
+                    </td>
+                  </tr>
+                </table>-->
+        <div align="center">
+                
+                </div>
+        
+        
+                
+                <div class="modalContainer" 
+                  ng-style="{'background-image': 'url('/media/aniket/2B508CB150AFD7C5/sem2/sem4/SA/newproj/src/app ')'}">
+                </div>
+
+                <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p align="right" ><font size="2" color="sky blue">&copy; 2018 ANI@IAURO SYSTEMS</font></p>
+        
+              </form>
+        </body>
+
+
+</html>
